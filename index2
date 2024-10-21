@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gamemania</title>
+</head>
+    <body>
+    <div class="nav">
+        <div class="logo ">
+            <img src="imgs/gamemanialogo.png" alt="">
+        </div>
+
+        <div class="hamburg">
+            <input id="menu-hamburguer" type="checkbox" />
+            <label for="menu-hamburguer">
+                <div class="menu">
+                    <span class="hamburguer"></span>
+                </div>
+            </label>
+        </div>
+        
+        
+        <div class="barra">
+            <div class="pesquisar">
+                <h1>Pesquisar</h1>
+                <img src="" alt="">
+            </div>
+        </div>
+        
+        <div class="icone">
+            <div class="desktop">
+                <p>Desktop</p>
+                <img src="imgs/pc.png" alt="">
+            </div>
+            
+            <div class="console">
+                <p>Console</p>
+                <img src="imgs/jogos.png" alt="">
+            </div>
+            
+            <div class="games">
+                <p>Games</p>
+                <img src="imgs/pacman.png" alt="">
+            </div>
+        
+            <div class="mobile">
+                <p>Mobile</p>
+                <img src="imgs/iphone-smartphone.png" alt="">
+            </div>
+        </div>
+        
+        <div class="perfil">
+            <img src="imgs/botao-redondo-da-conta-com-o-usuario-dentro.png" alt="">
+            <p>Acesse sua conta</p>
+        </div>
+
+        <div class="carrinho">
+            <img src="imgs/carrinho-de-compras.png" alt="">
+            <p>Seu carrinho</p>
+        </div>
+
+    </div>
+
+    <div class="carrossel">
+        <div class="imgCar">
+            <img src="imgs/the last" alt="">
+            <img src="imgs/images.jfif" alt="">
+            <img src="imgs/gt6.jfif" alt="">    
+        </div>
+       
+        <div>
+            <h1>Recomendações e lançamentos</h1>
+        </div>
+    </div>
+
+    <div class="produtos">
+        <div class="caixaproduto">
+            <div class="imgProd">
+                <img src="imgs/81IPGZtygYL.__AC_SY445_SX342_QL70_ML2_.jpg" alt="">
+            </div>
+            <div class="info">
+                <p>Item e informações aqui</p>
+            </div>
+            <div class="valor">
+                <h1>R$999</h1>
+            </div>
+        </div>
+        <div class="caixaproduto">
+            <div class="imgProd">
+                <img src="imgs/gabinete" alt="">
+            </div>
+            <div class="info">
+                <p>Item e informações aqui</p>
+            </div>
+            <div class="valor">
+                <h1>R$999</h1>
+            </div>
+        </div>
+        <div class="caixaproduto">
+            <div class="imgProd">
+                <img src="imgs/ps5" alt="">
+            </div>
+            <div class="info">
+                <p>Item e informações aqui</p>
+            </div>
+            <div class="valor">
+                <h1>R$999</h1>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
