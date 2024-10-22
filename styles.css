@@ -1,0 +1,100 @@
+.nav {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: auto;
+    height: 90px;
+    margin: 10px 10px;
+}
+
+.hamburg {
+    display: flex;
+    align-items: center;
+    margin-left: -100px;
+}
+
+.hamburg input[type="checkbox"] {
+    display: none; 
+}
+
+.menu-label {
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 9px; 
+}
+
+.hamburguer {
+    display: block;
+    width: 50px; 
+    height: 10px; 
+    background-color: white; 
+    border-radius: 2px; 
+    transition: all 0.3s ease; 
+}
+
+#menu-hamburguer:checked + .menu-label .menu .hamburguer:nth-child(1) {
+    transform: rotate(90deg) translate(5px, 5px); 
+    /* background-color: blue; */
+}
+
+#menu-hamburguer:checked + .menu-label .menu .hamburguer:nth-child(2) {
+    opacity: 0; 
+}
+
+#menu-hamburguer:checked + .menu-label .menu .hamburguer:nth-child(3) {
+    transform: rotate(-90deg) translate(5px, -5px); 
+    /* background-color: blue; */
+}
+
+.icone {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+    box-sizing: border-box;
+    
+}
+
+.icone div {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    
+}
+
+.icone img {
+    height: 30px;
+    width: auto;
+}
+
+.perfil img {
+    height: 50px;
+    width: auto;
+}
+
+.carrinho img{
+    height: 50px;
+    width: auto;
+}
+
+.pesquisar {
+    width: 800px;
+}
+
+.pesquisar input {
+    width: 100%;
+    padding: 10px; 
+    border: 1px solid white; 
+    border-radius: 50px; 
+    background-color: white; 
+    color: black; 
+}
