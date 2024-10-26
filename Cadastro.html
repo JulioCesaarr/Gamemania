@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="stylesss.css">
 </head>
 <body>
-    <h1>beta</h1>
+    <div class="register-container">
+        <div class="left">
+            <img src="imgs/gamemanialogo.png" alt="ilustração Tecnologia">
+        </div>
+        <div class="right">
+            <h2>Cadastre-se</h2>
+            <form action="/Register" method="post">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@dominio.com">
+
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="********">
+
+                <label for="confirm-password">Confirme a senha</label>
+                <input type="password" id="password" name="password" placeholder="********">
+
+                <button type="submit" class="register-btn">Cadastre-se</button>
+            </form>
+            <div class="login">
+                <p>Já possui uma conta? <a href="Conta.html">Clique aqui!</a></p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

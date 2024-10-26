@@ -13,7 +13,7 @@ body {
     height: 100vh;
 }
 
-.login-container {
+.register-container {
     background-color: #0066ff;
     display: flex;
     border-radius: 10px;
@@ -22,17 +22,17 @@ body {
     width: 900px;
 }
 
-.login-left {
+.left {
     background-color: #0066ff;
     padding: 40px;
     width: 50%;
 }
 
-.login-left img {
-    max-width: 100%;
+.left img{
+    width: 100%;
 }
 
-.login-right {
+.right {
     width: 50%;
     padding: 40px;
 }
@@ -61,12 +61,7 @@ input {
     font-size: 16px;
 }
 
-input:focus {
-    outline: none;
-    border-color: #000000;
-}
-
-.login-btn {
+.register-btn {
     background-color: #000000;
     color: #fff;
     border: none;
@@ -76,50 +71,16 @@ input:focus {
     cursor: pointer;
 }
 
-.login-btn:hover {
+.register-btn:hover {
     background-color: #0056b3;
-}
-
-.forgot-password {
-    margin-bottom: 20px;
-}
-
-.forgot-password a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.forgot-password a:hover {
-    text-decoration: underline;
-}
-
-.signup {
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.signup a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.signup a:hover {
-    text-decoration: underline;
-}
-
-.remember-me {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.remember-me input {
-    margin-right: 8px;
 }
 
 p {
     color: #fff;
 }
-.signup a:hover {
-    color: #0056b3;
+a {
+    color: #fff;
 }
+a:hover {
+    color: #0056b3;
+} 
