@@ -7,6 +7,7 @@
 
 .logo img {
     width: auto;
+    height: 90px;   
     height: 90px;
     margin: 10px 10px;
 }
@@ -14,7 +15,8 @@
 .hamburg {
     display: flex;
     align-items: center;
-    margin-left: -80px;
+    margin-left: -40px;
+    margin-left: -50px;
 }
 
 .hamburg input[type="checkbox"] {
@@ -35,7 +37,6 @@
     display: block;
     width: 50px; 
     height: 10px; 
-    margin-left: 50px;
     background-color: white; 
     border-radius: 2px; 
     transition: all 0.3s ease; 
@@ -82,14 +83,22 @@
     width: auto;
 }
 
-p {
-    color: #fff;
+
+.perfil {
+    color: black    ;
 }
+
 
 .carrinho img{
     height: 50px;
     width: auto;
 }
+
+
+.carrinho {
+    color: rgb(0, 0, 0);
+}
+
 
 .pesquisar {
     width: 700px;
@@ -105,9 +114,9 @@ p {
 }
 
 .carrossel {
-    width: 500%;
+    width: 110%;
     height: 50rem;
-    position: relative;
+    position: center;
     display: flex;
     overflow: auto;
     scroll-snap-type: x mandatory;
@@ -116,16 +125,17 @@ p {
 .carrossel img {
     width: 50%;
     height: 50%;
-    position: sticky;
-    left: 300px;
-    flex-shrink: 0;
+    position: relative;
+    left: 21%;
+    flex-shrink: 100%;
     object-fit: cover;
     scroll-behavior: smooth;
  }
 
+
 .recomendacao {
     position: relative;
-    left: 34%;
+    left: 28%;
 }
 
 .caixaproduto {
@@ -213,3 +223,22 @@ p {
     box-shadow: 0 8px 16px rgba(1, 1, 1, 1.4); /* Adiciona sombra para efeito de elevação */
 }   
 
+.carousel {
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    }
+    .carousel img {
+    width: 900px;
+    height: 650px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Suavidade na transição */
+    position: absolute;
+    }
+    .carousel img.active {
+    opacity: 1;
+    position: relative;
+    }

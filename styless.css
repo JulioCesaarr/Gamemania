@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px;
 }
 
 .login-container {
@@ -20,6 +21,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 900px;
+    max-width: 100%;
 }
 
 .login-left {
@@ -122,4 +124,50 @@ p {
 }
 .signup a:hover {
     color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        width: 100%; /* Ajusta a largura para o tamanho da tela */
+        max-width: 600px; /* Define um limite para o container */
+    }
+
+    .login-left, .login-right {
+        width: 100%;
+        padding: 20px; /* Reduz o padding para caber melhor em telas menores */
+        text-align: center; /* Centraliza o conteúdo no modo de coluna única */
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduz o padding geral */
+    }
+
+    .login-container {
+        max-width: 100%; /* Usa toda a largura disponível na tela */
+    }
+
+    .login-left, .login-right {
+        padding: 15px; /* Reduz ainda mais o padding */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Ajusta o tamanho da fonte do título */
+    }
+
+    label {
+        font-size: 13px; /* Ajusta o tamanho das labels */
+    }
+
+    input, .login-btn {
+        padding: 10px; /* Reduz o padding dos campos de input e botão */
+        font-size: 15px; /* Ajusta o tamanho da fonte */
+    }
+
+    .signup {
+        font-size: 13px; /* Ajusta o tamanho do texto de cadastro */
+    }
 }

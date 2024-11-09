@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px;
 }
 
 .register-container {
@@ -20,6 +21,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 900px;
+    max-width: 100%;
 }
 
 .left {
@@ -84,3 +86,48 @@ a {
 a:hover {
     color: #0056b3;
 } 
+
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 600px; /* Limite de largura para o container em tablets */
+    }
+
+    .left, .right {
+        width: 100%;
+        padding: 20px; /* Reduz o padding para caber melhor em telas menores */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduz o padding geral */
+    }
+
+    .register-container {
+        max-width: 100%;
+    }
+
+    .left, .right {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    input, .register-btn {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
