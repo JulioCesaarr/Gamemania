@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 .logo img {
@@ -62,7 +63,14 @@
     align-items: center;
     gap: 100px;
     box-sizing: border-box;
-    
+    flex-wrap: wrap;
+}
+
+.icone-item {
+    position: relative; 
+    flex: 1 1 100px; /* Flexível para que o item ocupe a largura disponível */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 10px; /* Espaço entre os itens */
 }
 
 .icone div {
@@ -70,7 +78,18 @@
     align-items: center;
     color: white;
     gap: 10px;
-    
+    position: relative; /* Necessário para posicionar a caixa de fundo atrás do conteúdo */
+}
+
+.background-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(243, 0, 0, 0.5); /* Cor e transparência da caixa de texto */
+    z-index: -1; /* Coloca a caixa atrás do conteúdo */
+    border-radius: 10px; /* Arredondar as bordas, se necessário */
 }
 
 .icone img {
@@ -78,25 +97,112 @@
     width: auto;
 }
 
+.icone p {
+    padding-top: 19px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-top: 0px;
+    padding: 12px 10px; /* Ajustei o padding para diminuir o tamanho da caixa */
+    border-radius: 10px;
+    background-color: blue;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfil:hover {
+    background-color: blue;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 .perfil img {
     height: 50px;
     width: auto;
+    margin-bottom: 10px; /* Diminuí um pouco o espaçamento */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
 }
 
-
-.perfil {
-    color: black    ;
+.perfil img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
+.perfil a {
+    text-decoration: none;
+    color: white; /* Cor do texto alterada para branco */
+    font-size: 14px; /* Diminuí o tamanho da fonte */
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease;
+}
 
-.carrinho img{
-    height: 50px;
-    width: auto;
+.perfil a:hover {
+    color: #00bfff; /* Alterei para uma cor mais clara para o hover */
+}
+
+.perfil p {
+    margin: 0;
+    padding-top: 5px;
+    font-size: 14px;
+    color: white; /* Cor do texto para branco */
 }
 
 
 .carrinho {
-    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-top: 0px;
+    padding: 12px 0px; /* Mesmo padding para manter o layout consistente */
+    border-radius: 10px;
+    background-color: blue; /* Cor de fundo igual ao perfil */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carrinho:hover {
+    background-color: blue; /* Cor de fundo permanece igual ao perfil */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carrinho img {
+    height: 50px;
+    width: auto;
+    margin-bottom: 10px; /* Ajuste de espaçamento como o do perfil */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.carrinho img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.carrinho a {
+    text-decoration: none;
+    color: white; /* Cor do texto alterada para branco */
+    font-size: 14px; /* Tamanho da fonte igual ao do perfil */
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.carrinho a:hover {
+    color: #00bfff; /* Cor de destaque ao passar o mouse */
+}
+
+.carrinho p {
+    margin: 0;
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white; /* Texto em branco como o do perfil */
 }
 
 
@@ -162,48 +268,78 @@
 }
 
 .descricao {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: auto;
-    margin-top: 300px;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px; /* Espaço entre o texto e a imagem */
+    text-align: center;
 }
 
 .valor {
-    font-size: 1.2em;
-    color: #00ff00;
+    font-size: 1.2em; /* Tamanho maior para o valor */
+    color: #00cc00; /* Cor verde para o preço */
+    font-weight: bold; /* Negrito para o preço */
+    margin-top: 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; 
+    justify-content: center;
+}
+
+.valor-box {
+    font-size: 1.2em;
+    color: #00cc00;
+    font-weight: bold;
+    background-color: rgb(1, 2, 65);
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer; /* Mostra o cursor de mãozinha, indicando que é clicável */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none; /* Remove sublinhado (caso use <a>) */
+}
+
+.valor-box:hover {
+    background-color: #014a7a; /* Cor mais suave ao passar o mouse */
+    border-color: white; /* Cor mais forte para a borda */
+}
+
+.valor-box:focus {
+    outline: none; /* Remove o contorno padrão */
+    background-color: #014a7a; /* Cor mais suave quando em foco */
+    border-color: white; /* Cor mais escura para a borda */
 }
 
 .imgprodutos {
     display: flex;
     justify-content: space-around;
-    gap: 2px;
-    padding: 2px;
+    gap: 20px; /* Aumenta o espaçamento entre as caixas de produtos */
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 .caixaImagem {
-    width: 200px;
+    width: 250px; /* Tamanho maior para as caixas */
     height: auto;
-    margin-top: 100px;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Padding maior para mais espaço interno */
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #ffffff; /* Cor de fundo mais clara */
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9;
-    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transições suaves */
 }
 
 .descricao {
-    margin-bottom: 10px; /* Espaço entre o texto superior e a imagem */
-    font-size: 1em;
-    color: #333;
+    font-size: 1.1em; /* Aumenta o tamanho da fonte */
+    color: #333; /* Cor de texto mais escura */
+    font-weight: bold; /* Texto em negrito para destaque */
+    margin-bottom: 10px; /* Espaço entre a descrição e o preço */
 }
+
 
 .caixaImagem img {
     width: 100%;
@@ -212,15 +348,22 @@
 }
 
 .caixaImagem img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Anima a transformação e a sombra */
+        width: 100%;
+        height: auto;
+        border-radius: 10px; /* Bordas arredondadas nas imagens */
+        margin-bottom: 15px; /* Espaço entre a imagem e o texto */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições para a imagem */
+}
+
+.caixaImagem:hover {
+    transform: translateY(-10px); /* Eleva a caixa ao passar o mouse */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15); /* Aumenta a sombra */
+    background-color: #f4f4f4; /* Cor de fundo levemente alterada */
 }
 
 .caixaImagem img:hover {
-    transform: translateY(-10px); /* Move a imagem 10px para cima */
-    box-shadow: 0 8px 16px rgba(1, 1, 1, 1.4); /* Adiciona sombra para efeito de elevação */
+    transform: scale(1.05); /* Aumenta um pouco a imagem ao passar o mouse */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave à imagem */
 }   
 
 .carousel {
@@ -241,4 +384,85 @@
     .carousel img.active {
     opacity: 1;
     position: relative;
+}
+@media (max-width: 1200px) {
+    .icone {
+        gap: 50px;
     }
+
+    .pesquisar {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .hamburg {
+        margin-left: 0;
+    }
+
+    .icone {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgprodutos {
+        flex-direction: column;
+    }
+
+    .caixaImagem {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .icone {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caixaImagem {
+        width: 100%;
+    }
+
+    .pesquisar input {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .perfil img, .carrinho img {
+        height: 40px;
+    }
+
+    .perfil, .carrinho {
+        font-size: 12px;
+    }
+
+    .caixaImagem {
+        width: 90%;
+    }
+}

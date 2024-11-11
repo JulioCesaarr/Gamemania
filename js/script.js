@@ -11,4 +11,4 @@ img.classList.add("active");
 currentIndex = (currentIndex + 1) % images.length;
 }
 
-setInterval(showNextImage, 3000); 
+setInterval(showNextImage, 3000); // Alterna a cada 3 segundos
