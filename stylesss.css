@@ -75,16 +75,19 @@ input {
 
 .register-btn:hover {
     background-color: #0056b3;
+    transition: 0.5s;
 }
 
 p {
     color: #fff;
+    margin-top: 15px;
 }
 a {
     color: #fff;
 }
 a:hover {
     color: #0056b3;
+    transition: 0.5s;
 } 
 
 @media (max-width: 768px) {

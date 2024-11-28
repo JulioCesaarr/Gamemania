@@ -45,7 +45,7 @@
 
 #menu-hamburguer:checked + .menu-label .menu .hamburguer:nth-child(1) {
     transform: rotate(90deg) translate(5px, 5px); 
-    /* background-color: blue; */
+    background-color: blue;
 }
 
 #menu-hamburguer:checked + .menu-label .menu .hamburguer:nth-child(2) {
@@ -54,7 +54,7 @@
 
 #menu-hamburguer:checked + .menu-label .menu .hamburguer:nth-child(3) {
     transform: rotate(-90deg) translate(5px, -5px); 
-    /* background-color: blue; */
+    background-color: blue;
 }
 
 .icone {
@@ -152,15 +152,20 @@
     color: white; /* Cor do texto para branco */
 }
 
+.perfil p:hover {
+    color: black;
+    transition: 0.8s ease;
+}
 
 .carrinho {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     align-items: center;
     justify-content: center;
     color: black;
-    margin-top: 0px;
+    margin-top: 10px;
     padding: 12px 0px; /* Mesmo padding para manter o layout consistente */
+    margin-right: 100px;
     border-radius: 10px;
     background-color: blue; /* Cor de fundo igual ao perfil */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -241,7 +246,7 @@
 
 .recomendacao {
     position: relative;
-    left: 28%;
+    left: 35%; 
 }
 
 .caixaproduto {
@@ -320,7 +325,7 @@
 }
 
 .caixaImagem {
-    width: 250px; /* Tamanho maior para as caixas */
+    width: calc(33.33% - 20px); /* Tamanho maior para as caixas */
     height: auto;
     padding: 15px; /* Padding maior para mais espaço interno */
     border-radius: 15px; /* Bordas mais arredondadas */
@@ -331,6 +336,7 @@
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transições suaves */
+    margin-top: 70px;
 }
 
 .descricao {
@@ -349,6 +355,7 @@
 
 .caixaImagem img {
         width: 100%;
+        max-width: 180px;
         height: auto;
         border-radius: 10px; /* Bordas arredondadas nas imagens */
         margin-bottom: 15px; /* Espaço entre a imagem e o texto */
@@ -385,6 +392,24 @@
     opacity: 1;
     position: relative;
 }
+
+#cart-popup {
+    position: absolute;  /* Para o popup flutuar sobre outros elementos */
+    background-color: rgba(0, 0, 0, 0.7);  /* Fundo semi-transparente */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;  /* Inicialmente escondido */
+    z-index: 1000;  /* Garante que o popup fique sobre outros elementos */
+    cursor: pointer;
+    
+}
+
+/* Se quiser posicionar o popup embaixo do carrinho, você pode ajustar o posicionamento */
+#cart {
+    position: relative;  /* Para o popup ser posicionado em relação ao carrinho */
+}
+
 @media (max-width: 1200px) {
     .icone {
         gap: 50px;
@@ -439,7 +464,7 @@
     }
 
     .caixaImagem {
-        width: 100%;
+        width: calc(50% - 20px);
     }
 
     .pesquisar input {
@@ -463,6 +488,6 @@
     }
 
     .caixaImagem {
-        width: 90%;
+        width: calc(100% - 20px);
     }
 }

@@ -80,6 +80,7 @@ input:focus {
 
 .login-btn:hover {
     background-color: #0056b3;
+    transition: 0.5s;
 }
 
 .forgot-password {
@@ -124,6 +125,7 @@ p {
 }
 .signup a:hover {
     color: #0056b3;
+    transition: 0.5s;
 }
 
 @media (max-width: 768px) {
